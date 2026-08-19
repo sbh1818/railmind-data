@@ -2,7 +2,7 @@ name: Biweekly Model Retrainer
 
 on:
   schedule:
-    - cron: '30 21 1,15 * *'
+    - cron: '30 21 8-14,22-28 * 0'
   workflow_dispatch:
 
 jobs:
