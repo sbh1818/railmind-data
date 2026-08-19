@@ -1,0 +1,5 @@
+requests==2.32.3
+pandas==2.2.3
+numpy==2.2.6
+catboost==1.2.7
+scikit-learn==1.6.1

@@ -1,0 +1,1202 @@
+[
+  {
+    "train_no": "12625",
+    "train_name": "Kerala Sf Exp",
+    "source_code": "TVC",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12626",
+    "train_name": "Kerala Express",
+    "source_code": "NDLS",
+    "destination_code": "TVC"
+  },
+  {
+    "train_no": "11301",
+    "train_name": "Udyan Express",
+    "source_code": "CSMT",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12704",
+    "train_name": "Falaknuma Sf Ex",
+    "source_code": "SC",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12628",
+    "train_name": "Karnataka Exp",
+    "source_code": "NDLS",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12617",
+    "train_name": "Mangladweep Exp",
+    "source_code": "ERS",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "12859",
+    "train_name": "Gitanjali Exp",
+    "source_code": "CSMT",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12138",
+    "train_name": "Punjab Mail",
+    "source_code": "FZR",
+    "destination_code": "CSMT"
+  },
+  {
+    "train_no": "12703",
+    "train_name": "Falaknuma Exp",
+    "source_code": "HWH",
+    "destination_code": "SC"
+  },
+  {
+    "train_no": "12616",
+    "train_name": "Grand Trunk Exp",
+    "source_code": "NDLS",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "11013",
+    "train_name": "Ltt Cbe Express",
+    "source_code": "LTT",
+    "destination_code": "CBE"
+  },
+  {
+    "train_no": "12627",
+    "train_name": "Karnataka Exp",
+    "source_code": "SBC",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12802",
+    "train_name": "Purushottam Exp",
+    "source_code": "ANVT",
+    "destination_code": "PURI"
+  },
+  {
+    "train_no": "12424",
+    "train_name": "Dbrt Rajdhani",
+    "source_code": "NDLS",
+    "destination_code": "DBRG"
+  },
+  {
+    "train_no": "12618",
+    "train_name": "Mngla Lksdp Exp",
+    "source_code": "NZM",
+    "destination_code": "ERS"
+  },
+  {
+    "train_no": "12840",
+    "train_name": "Mas Hwh Sf Mail",
+    "source_code": "MAS",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "11302",
+    "train_name": "Udyan Exp",
+    "source_code": "SBC",
+    "destination_code": "CSMT"
+  },
+  {
+    "train_no": "12622",
+    "train_name": "Tamilnadu Exp",
+    "source_code": "NDLS",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12621",
+    "train_name": "Tamilnadu Sf Exp",
+    "source_code": "MAS",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "15909",
+    "train_name": "Avadh Assam Exp",
+    "source_code": "DBRG",
+    "destination_code": "LGH"
+  },
+  {
+    "train_no": "12137",
+    "train_name": "Punjab Mail",
+    "source_code": "CSMT",
+    "destination_code": "FZR"
+  },
+  {
+    "train_no": "15910",
+    "train_name": "Avadh Assam Exp",
+    "source_code": "LGH",
+    "destination_code": "DBRG"
+  },
+  {
+    "train_no": "11014",
+    "train_name": "Cbe Ltt Exp",
+    "source_code": "CBE",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "17230",
+    "train_name": "Sabari Express",
+    "source_code": "SC",
+    "destination_code": "TVC"
+  },
+  {
+    "train_no": "12724",
+    "train_name": "Telangana Exp",
+    "source_code": "NDLS",
+    "destination_code": "HYB"
+  },
+  {
+    "train_no": "12860",
+    "train_name": "Gitanjali Exp",
+    "source_code": "HWH",
+    "destination_code": "CSMT"
+  },
+  {
+    "train_no": "12801",
+    "train_name": "Purushottam Sf",
+    "source_code": "PURI",
+    "destination_code": "ANVT"
+  },
+  {
+    "train_no": "12841",
+    "train_name": "Coromandal Exp",
+    "source_code": "HWH",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12839",
+    "train_name": "Chennai Mail",
+    "source_code": "HWH",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12423",
+    "train_name": "Rajdhani Exp",
+    "source_code": "DBRG",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12809",
+    "train_name": "Howrah Mail",
+    "source_code": "CSMT",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "17229",
+    "train_name": "Sabari Express",
+    "source_code": "TVC",
+    "destination_code": "SC"
+  },
+  {
+    "train_no": "13202",
+    "train_name": "Ltt Rajgir Exp",
+    "source_code": "LTT",
+    "destination_code": "RGD"
+  },
+  {
+    "train_no": "12791",
+    "train_name": "Sc Dnr Sf Exp",
+    "source_code": "SC",
+    "destination_code": "DNR"
+  },
+  {
+    "train_no": "22692",
+    "train_name": "Sbc Rajdhani",
+    "source_code": "NZM",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12723",
+    "train_name": "Telangana Sf Exp",
+    "source_code": "HYB",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12842",
+    "train_name": "Coromandel Exp",
+    "source_code": "MAS",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12792",
+    "train_name": "Secunderabad Ex",
+    "source_code": "DNR",
+    "destination_code": "SC"
+  },
+  {
+    "train_no": "22691",
+    "train_name": "Rajdhani Exp",
+    "source_code": "SBC",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "12615",
+    "train_name": "Grand Trunk Exp",
+    "source_code": "MAS",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "19019",
+    "train_name": "Bdts Hw Exp",
+    "source_code": "BDTS",
+    "destination_code": "HW"
+  },
+  {
+    "train_no": "15018",
+    "train_name": "Gkp Ltt Exp",
+    "source_code": "GKP",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "12163",
+    "train_name": "Ltt Mas Exp",
+    "source_code": "LTT",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "15017",
+    "train_name": "Ltt Gkp Express",
+    "source_code": "LTT",
+    "destination_code": "GKP"
+  },
+  {
+    "train_no": "12810",
+    "train_name": "Hwh Csmt Mail",
+    "source_code": "HWH",
+    "destination_code": "CSMT"
+  },
+  {
+    "train_no": "12312",
+    "train_name": "Netaji Express",
+    "source_code": "KLK",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12311",
+    "train_name": "Netaji Express",
+    "source_code": "HWH",
+    "destination_code": "KLK"
+  },
+  {
+    "train_no": "12394",
+    "train_name": "Sampooran K Exp",
+    "source_code": "NDLS",
+    "destination_code": "RJPB"
+  },
+  {
+    "train_no": "12635",
+    "train_name": "Vaigai Sf Exp",
+    "source_code": "MS",
+    "destination_code": "MDU"
+  },
+  {
+    "train_no": "12164",
+    "train_name": "Mas Ltt Sf Exp",
+    "source_code": "MAS",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "12760",
+    "train_name": "Charminar Sf Ex",
+    "source_code": "HYB",
+    "destination_code": "TBM"
+  },
+  {
+    "train_no": "13201",
+    "train_name": "Rgd Ltt Exp",
+    "source_code": "RGD",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "19020",
+    "train_name": "Hw Bdts Exp",
+    "source_code": "HW",
+    "destination_code": "BDTS"
+  },
+  {
+    "train_no": "16525",
+    "train_name": "Cape Sbc Express",
+    "source_code": "CAPE",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12786",
+    "train_name": "Kacheguda Exp",
+    "source_code": "AP",
+    "destination_code": "KCG"
+  },
+  {
+    "train_no": "12759",
+    "train_name": "Charminar Sf Exp",
+    "source_code": "TBM",
+    "destination_code": "HYB"
+  },
+  {
+    "train_no": "12785",
+    "train_name": "Kcg Ap Sf Exp",
+    "source_code": "KCG",
+    "destination_code": "AP"
+  },
+  {
+    "train_no": "12471",
+    "train_name": "Swaraj Express",
+    "source_code": "BDTS",
+    "destination_code": "SVDK"
+  },
+  {
+    "train_no": "18237",
+    "train_name": "Chattisgarh Exp",
+    "source_code": "KRBA",
+    "destination_code": "ASR"
+  },
+  {
+    "train_no": "12314",
+    "train_name": "Sealdah Rajdhni",
+    "source_code": "NDLS",
+    "destination_code": "SDAH"
+  },
+  {
+    "train_no": "12695",
+    "train_name": "Mas Tvc Sf Exp",
+    "source_code": "MAS",
+    "destination_code": "TVC"
+  },
+  {
+    "train_no": "12562",
+    "train_name": "Swtantrta S Exp",
+    "source_code": "NDLS",
+    "destination_code": "JYG"
+  },
+  {
+    "train_no": "18238",
+    "train_name": "Chhatisgarh Exp",
+    "source_code": "ASR",
+    "destination_code": "BSP"
+  },
+  {
+    "train_no": "12052",
+    "train_name": "Csmt Janshtabdi",
+    "source_code": "MAO",
+    "destination_code": "CSMT"
+  },
+  {
+    "train_no": "12472",
+    "train_name": "Swaraj Express",
+    "source_code": "SVDK",
+    "destination_code": "BDTS"
+  },
+  {
+    "train_no": "12915",
+    "train_name": "Ashram Express",
+    "source_code": "SBIB",
+    "destination_code": "DLI"
+  },
+  {
+    "train_no": "12393",
+    "train_name": "S Kranti Sup Ex",
+    "source_code": "RJPB",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12636",
+    "train_name": "Vaigai Sf Exp",
+    "source_code": "MDU",
+    "destination_code": "MS"
+  },
+  {
+    "train_no": "12561",
+    "train_name": "Swatantra S Exp",
+    "source_code": "JYG",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12553",
+    "train_name": "Vaishali Exp",
+    "source_code": "LLP",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "16526",
+    "train_name": "Kanyakumari Exp",
+    "source_code": "SBC",
+    "destination_code": "CAPE"
+  },
+  {
+    "train_no": "12916",
+    "train_name": "Ashram Express",
+    "source_code": "DLI",
+    "destination_code": "SBIB"
+  },
+  {
+    "train_no": "12951",
+    "train_name": "Ndls Tejas Raj",
+    "source_code": "MMCT",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12554",
+    "train_name": "Vaishali Exp",
+    "source_code": "NDLS",
+    "destination_code": "LLP"
+  },
+  {
+    "train_no": "12051",
+    "train_name": "Mao Janshatabdi",
+    "source_code": "CSMT",
+    "destination_code": "MAO"
+  },
+  {
+    "train_no": "12558",
+    "train_name": "Sapt Kranti Exp",
+    "source_code": "ANVT",
+    "destination_code": "MFP"
+  },
+  {
+    "train_no": "12556",
+    "train_name": "Gorakhdham Exp",
+    "source_code": "BTI",
+    "destination_code": "GKP"
+  },
+  {
+    "train_no": "12955",
+    "train_name": "Mmct Jaipur Sf",
+    "source_code": "MMCT",
+    "destination_code": "JP"
+  },
+  {
+    "train_no": "12313",
+    "train_name": "Rajdhani Expres",
+    "source_code": "SDAH",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12488",
+    "train_name": "Seemanchal Exp",
+    "source_code": "ANVT",
+    "destination_code": "JBN"
+  },
+  {
+    "train_no": "12557",
+    "train_name": "Sapt Kranti Exp",
+    "source_code": "MFP",
+    "destination_code": "ANVT"
+  },
+  {
+    "train_no": "12310",
+    "train_name": "Rjpb Tejas Raj",
+    "source_code": "NDLS",
+    "destination_code": "RJPB"
+  },
+  {
+    "train_no": "12678",
+    "train_name": "Sbc Intercity",
+    "source_code": "ERS",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12953",
+    "train_name": "Ak Tejas Raj Ex",
+    "source_code": "MMCT",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "12696",
+    "train_name": "Tvc Mas Sf Exp",
+    "source_code": "TVC",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12398",
+    "train_name": "Mahabodhi Exp",
+    "source_code": "NDLS",
+    "destination_code": "GAYA"
+  },
+  {
+    "train_no": "12952",
+    "train_name": "Mmct Tejas Raj",
+    "source_code": "NDLS",
+    "destination_code": "MMCT"
+  },
+  {
+    "train_no": "12303",
+    "train_name": "Poorva Express",
+    "source_code": "HWH",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12304",
+    "train_name": "Poorva Express",
+    "source_code": "NDLS",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12309",
+    "train_name": "Rjpb Tejas Raj",
+    "source_code": "RJPB",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12677",
+    "train_name": "Ernakulam Exp",
+    "source_code": "SBC",
+    "destination_code": "ERS"
+  },
+  {
+    "train_no": "12480",
+    "train_name": "Suryanagari Exp",
+    "source_code": "BDTS",
+    "destination_code": "JU"
+  },
+  {
+    "train_no": "12711",
+    "train_name": "Pinakini Sf Exp",
+    "source_code": "BZA",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12607",
+    "train_name": "Lalbagh Sf Exp",
+    "source_code": "MAS",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12101",
+    "train_name": "Jnaneshwari Exp",
+    "source_code": "LTT",
+    "destination_code": "SHM"
+  },
+  {
+    "train_no": "12619",
+    "train_name": "Matsyagandha Exp",
+    "source_code": "LTT",
+    "destination_code": "MAQ"
+  },
+  {
+    "train_no": "12954",
+    "train_name": "Ak Tejas Raj Ex",
+    "source_code": "NZM",
+    "destination_code": "MMCT"
+  },
+  {
+    "train_no": "12620",
+    "train_name": "Matsyaganda Exp",
+    "source_code": "MAQ",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "12301",
+    "train_name": "Rajdhani Expres",
+    "source_code": "HWH",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12420",
+    "train_name": "Gomti Express",
+    "source_code": "NDLS",
+    "destination_code": "LKO"
+  },
+  {
+    "train_no": "12608",
+    "train_name": "Lalbagh Sf Exp",
+    "source_code": "SBC",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12555",
+    "train_name": "Gorakhdham Exp",
+    "source_code": "GKP",
+    "destination_code": "BTI"
+  },
+  {
+    "train_no": "12203",
+    "train_name": "Garib Rath Exp",
+    "source_code": "SHC",
+    "destination_code": "ASR"
+  },
+  {
+    "train_no": "12230",
+    "train_name": "Lucknow Mail",
+    "source_code": "NDLS",
+    "destination_code": "LKO"
+  },
+  {
+    "train_no": "12308",
+    "train_name": "Ju Hwh Sf Exp",
+    "source_code": "JU",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12397",
+    "train_name": "Mahabodhi Exp",
+    "source_code": "GAYA",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12307",
+    "train_name": "Hwh Ju Express",
+    "source_code": "HWH",
+    "destination_code": "JU"
+  },
+  {
+    "train_no": "12204",
+    "train_name": "Shc Garib Rath",
+    "source_code": "ASR",
+    "destination_code": "SHC"
+  },
+  {
+    "train_no": "12633",
+    "train_name": "Kanyakumari Exp",
+    "source_code": "MS",
+    "destination_code": "CAPE"
+  },
+  {
+    "train_no": "12302",
+    "train_name": "Hwh Rajdhani",
+    "source_code": "NDLS",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12816",
+    "train_name": "Nandankanan Exp",
+    "source_code": "ANVT",
+    "destination_code": "PURI"
+  },
+  {
+    "train_no": "12956",
+    "train_name": "Jp Mmct Sf Exp",
+    "source_code": "JP",
+    "destination_code": "MMCT"
+  },
+  {
+    "train_no": "12560",
+    "train_name": "Shiv Ganga Exp",
+    "source_code": "NDLS",
+    "destination_code": "BNRS"
+  },
+  {
+    "train_no": "12479",
+    "train_name": "Surya Nagari Exp",
+    "source_code": "JU",
+    "destination_code": "BDTS"
+  },
+  {
+    "train_no": "12631",
+    "train_name": "Nellai Sf Exp",
+    "source_code": "MS",
+    "destination_code": "TEN"
+  },
+  {
+    "train_no": "12958",
+    "train_name": "Swran J Rajdhani",
+    "source_code": "NDLS",
+    "destination_code": "SBIB"
+  },
+  {
+    "train_no": "12707",
+    "train_name": "Sampark Kranti",
+    "source_code": "TPTY",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "12658",
+    "train_name": "Sbc Mas Sf Mail",
+    "source_code": "SBC",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12815",
+    "train_name": "Nandankanan Sf",
+    "source_code": "PURI",
+    "destination_code": "ANVT"
+  },
+  {
+    "train_no": "13287",
+    "train_name": "South Bihar Exp",
+    "source_code": "DURG",
+    "destination_code": "ARA"
+  },
+  {
+    "train_no": "12229",
+    "train_name": "Lucknow Mail",
+    "source_code": "LKO",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12712",
+    "train_name": "Pinakini Sf Exp",
+    "source_code": "MAS",
+    "destination_code": "BZA"
+  },
+  {
+    "train_no": "12559",
+    "train_name": "Shiv Ganga Exp",
+    "source_code": "BNRS",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12419",
+    "train_name": "Gomti Express",
+    "source_code": "LKO",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12634",
+    "train_name": "Kanyakumari Exp",
+    "source_code": "CAPE",
+    "destination_code": "MS"
+  },
+  {
+    "train_no": "12632",
+    "train_name": "Nellai Sf Exp",
+    "source_code": "TEN",
+    "destination_code": "MS"
+  },
+  {
+    "train_no": "12657",
+    "train_name": "Mas Sbc Sf Mail",
+    "source_code": "MAS",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12708",
+    "train_name": "Nzm Tpty Sf Exp",
+    "source_code": "NZM",
+    "destination_code": "TPTY"
+  },
+  {
+    "train_no": "12487",
+    "train_name": "Seemanchal Exp",
+    "source_code": "JBN",
+    "destination_code": "ANVT"
+  },
+  {
+    "train_no": "19015",
+    "train_name": "Saurashtra Exp",
+    "source_code": "DDR",
+    "destination_code": "PBR"
+  },
+  {
+    "train_no": "12957",
+    "train_name": "Sbib Ndls Raj",
+    "source_code": "SBIB",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12931",
+    "train_name": "Adi Double Deckr",
+    "source_code": "MMCT",
+    "destination_code": "ADI"
+  },
+  {
+    "train_no": "12381",
+    "train_name": "Poorva Express",
+    "source_code": "HWH",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12003",
+    "train_name": "Swaran Shatabdi",
+    "source_code": "LJN",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12004",
+    "train_name": "Shatabdi Express",
+    "source_code": "NDLS",
+    "destination_code": "LJN"
+  },
+  {
+    "train_no": "12382",
+    "train_name": "Poorva Express",
+    "source_code": "NDLS",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "13288",
+    "train_name": "South Bihar Exp",
+    "source_code": "ARA",
+    "destination_code": "DURG"
+  },
+  {
+    "train_no": "12165",
+    "train_name": "Ltt Gkp Sf Exp",
+    "source_code": "LTT",
+    "destination_code": "GKP"
+  },
+  {
+    "train_no": "12426",
+    "train_name": "Jammu Rajdhani",
+    "source_code": "JAT",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12102",
+    "train_name": "Jananeswari Exp",
+    "source_code": "SHM",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "12156",
+    "train_name": "Bhopal Express",
+    "source_code": "NZM",
+    "destination_code": "RKMP"
+  },
+  {
+    "train_no": "12609",
+    "train_name": "Mysuru Express",
+    "source_code": "MAS",
+    "destination_code": "AP"
+  },
+  {
+    "train_no": "12714",
+    "train_name": "Satavahana Sf",
+    "source_code": "SC",
+    "destination_code": "BZA"
+  },
+  {
+    "train_no": "12377",
+    "train_name": "Padatik Express",
+    "source_code": "SDAH",
+    "destination_code": "NOQ"
+  },
+  {
+    "train_no": "12425",
+    "train_name": "Jammu Rajdhani",
+    "source_code": "NDLS",
+    "destination_code": "JAT"
+  },
+  {
+    "train_no": "12854",
+    "train_name": "Amarkantak Exp",
+    "source_code": "BPL",
+    "destination_code": "DURG"
+  },
+  {
+    "train_no": "12378",
+    "train_name": "Padatik Express",
+    "source_code": "NOQ",
+    "destination_code": "SDAH"
+  },
+  {
+    "train_no": "19016",
+    "train_name": "Saurashtra Exp",
+    "source_code": "PBR",
+    "destination_code": "DDR"
+  },
+  {
+    "train_no": "12932",
+    "train_name": "Mmct Doubledecke",
+    "source_code": "ADI",
+    "destination_code": "MMCT"
+  },
+  {
+    "train_no": "12010",
+    "train_name": "Mmct Shatabdi Ex",
+    "source_code": "ADI",
+    "destination_code": "MMCT"
+  },
+  {
+    "train_no": "12155",
+    "train_name": "Rkmp Nzm Sf Exp",
+    "source_code": "RKMP",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "12351",
+    "train_name": "Hwh Rjpb Exp",
+    "source_code": "HWH",
+    "destination_code": "RJPB"
+  },
+  {
+    "train_no": "12007",
+    "train_name": "Mys Shatabdi",
+    "source_code": "MAS",
+    "destination_code": "MYS"
+  },
+  {
+    "train_no": "12352",
+    "train_name": "Rjpb Hwh Exp",
+    "source_code": "RJPB",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12402",
+    "train_name": "Ddn Kota Ac Exp",
+    "source_code": "DDN",
+    "destination_code": "KOTA"
+  },
+  {
+    "train_no": "12401",
+    "train_name": "Kota Ddn Ac Exp",
+    "source_code": "KOTA",
+    "destination_code": "DDN"
+  },
+  {
+    "train_no": "12610",
+    "train_name": "Chennai Express",
+    "source_code": "AP",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12001",
+    "train_name": "Ndls Shatabdi",
+    "source_code": "RKMP",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12166",
+    "train_name": "Gkp Ltt Express",
+    "source_code": "GKP",
+    "destination_code": "LTT"
+  },
+  {
+    "train_no": "12261",
+    "train_name": "Howrah Duronto",
+    "source_code": "CSMT",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "22436",
+    "train_name": "Vande Bharat Ex",
+    "source_code": "NDLS",
+    "destination_code": "BSB"
+  },
+  {
+    "train_no": "12432",
+    "train_name": "Tvc Rajdhani",
+    "source_code": "NZM",
+    "destination_code": "TVC"
+  },
+  {
+    "train_no": "12002",
+    "train_name": "Shatabdi Expres",
+    "source_code": "NDLS",
+    "destination_code": "RKMP"
+  },
+  {
+    "train_no": "12853",
+    "train_name": "Amarkantak Exp",
+    "source_code": "DURG",
+    "destination_code": "BPL"
+  },
+  {
+    "train_no": "12009",
+    "train_name": "Adi Shatabdi Exp",
+    "source_code": "MMCT",
+    "destination_code": "ADI"
+  },
+  {
+    "train_no": "22435",
+    "train_name": "Vande Bharat Ex",
+    "source_code": "BSB",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12975",
+    "train_name": "Mys Jp Exp",
+    "source_code": "MYS",
+    "destination_code": "JP"
+  },
+  {
+    "train_no": "22824",
+    "train_name": "Bbs Tejas Raj",
+    "source_code": "NDLS",
+    "destination_code": "BBS"
+  },
+  {
+    "train_no": "12431",
+    "train_name": "Rajdhani Exp",
+    "source_code": "TVC",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "12008",
+    "train_name": "Shatabdi Exp",
+    "source_code": "MYS",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "12260",
+    "train_name": "Sdah Duronto",
+    "source_code": "BKN",
+    "destination_code": "SDAH"
+  },
+  {
+    "train_no": "12262",
+    "train_name": "Csmt Duronto Ex",
+    "source_code": "HWH",
+    "destination_code": "CSMT"
+  },
+  {
+    "train_no": "12713",
+    "train_name": "Satavahana Sf",
+    "source_code": "BZA",
+    "destination_code": "SC"
+  },
+  {
+    "train_no": "22823",
+    "train_name": "Tejas Raj Exp",
+    "source_code": "BBS",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12274",
+    "train_name": "Hwh Duronto Exp",
+    "source_code": "NDLS",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "12989",
+    "train_name": "Ddr Ajmer Sf Exp",
+    "source_code": "DDR",
+    "destination_code": "AII"
+  },
+  {
+    "train_no": "12027",
+    "train_name": "Mas Sbc Shatabdi",
+    "source_code": "MAS",
+    "destination_code": "SBC"
+  },
+  {
+    "train_no": "12259",
+    "train_name": "Bkn Duronto Exp",
+    "source_code": "SDAH",
+    "destination_code": "BKN"
+  },
+  {
+    "train_no": "12976",
+    "train_name": "Jp Mysore Exp",
+    "source_code": "JP",
+    "destination_code": "MYS"
+  },
+  {
+    "train_no": "12028",
+    "train_name": "Shatabdi Exp",
+    "source_code": "SBC",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "14034",
+    "train_name": "Jammu Mail",
+    "source_code": "SVDK",
+    "destination_code": "SFG"
+  },
+  {
+    "train_no": "16587",
+    "train_name": "Bikaner Exp",
+    "source_code": "YPR",
+    "destination_code": "BKN"
+  },
+  {
+    "train_no": "12017",
+    "train_name": "Ddn Shtbdi Exp",
+    "source_code": "NDLS",
+    "destination_code": "DDN"
+  },
+  {
+    "train_no": "22707",
+    "train_name": "Double Decker Sf",
+    "source_code": "VSKP",
+    "destination_code": "TPTY"
+  },
+  {
+    "train_no": "12273",
+    "train_name": "Ndls Duronto Ex",
+    "source_code": "HWH",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12324",
+    "train_name": "Bme Hwh Sf Exp",
+    "source_code": "BME",
+    "destination_code": "HWH"
+  },
+  {
+    "train_no": "20902",
+    "train_name": "Vande Bharat Exp",
+    "source_code": "GNC",
+    "destination_code": "MMCT"
+  },
+  {
+    "train_no": "12270",
+    "train_name": "Mas Duronto Exp",
+    "source_code": "NZM",
+    "destination_code": "MAS"
+  },
+  {
+    "train_no": "16588",
+    "train_name": "Bkn Ypr Exp",
+    "source_code": "BKN",
+    "destination_code": "YPR"
+  },
+  {
+    "train_no": "12275",
+    "train_name": "Ndls Humsafar",
+    "source_code": "PRYJ",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "12323",
+    "train_name": "Hwh Bme Exp",
+    "source_code": "HWH",
+    "destination_code": "BME"
+  },
+  {
+    "train_no": "12276",
+    "train_name": "Humsafar Expres",
+    "source_code": "NDLS",
+    "destination_code": "PRYJ"
+  },
+  {
+    "train_no": "12286",
+    "train_name": "Sc Duronto Exp",
+    "source_code": "NZM",
+    "destination_code": "SC"
+  },
+  {
+    "train_no": "12990",
+    "train_name": "Aii Ddr Express",
+    "source_code": "AII",
+    "destination_code": "DDR"
+  },
+  {
+    "train_no": "22439",
+    "train_name": "Vande Bharat Ex",
+    "source_code": "NDLS",
+    "destination_code": "SVDK"
+  },
+  {
+    "train_no": "20901",
+    "train_name": "Vande Bharat Exp",
+    "source_code": "MMCT",
+    "destination_code": "GNC"
+  },
+  {
+    "train_no": "12285",
+    "train_name": "Nzm Duronto",
+    "source_code": "SC",
+    "destination_code": "NZM"
+  },
+  {
+    "train_no": "22440",
+    "train_name": "Vande Bharat Ex",
+    "source_code": "SVDK",
+    "destination_code": "NDLS"
+  },
+  {
+    "train_no": "14033",
+    "train_name": "Jammu Mail",
+    "source_code": "SFG",
+    "destination_code": "SVDK"
+  },
+  {
+    "train_no": "22708",
+    "train_name": "Tpty Vskp Dd Ex",
+    "source_code": "TPTY",
+    "destination_code": "VSKP"
+  }
+]
