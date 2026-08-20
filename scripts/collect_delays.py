@@ -39,7 +39,7 @@ CNF_DEFAULT_PARAMS = {
     'showPredictionGlobal': 'true',
     'showTgBucketPrediction': 'false',
 }
-CNF_CLASSES = ['SL', '3A', '2A', '1A']
+CNF_CLASSES = ['SL', '3A', '2A', '1A', 'CC', 'EC']
 
 
 # ============================================================
