@@ -26,7 +26,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR_DELAY = REPO_ROOT / 'data' / 'daily_collected' / 'delays'
 DATA_DIR_CNF = REPO_ROOT / 'data' / 'daily_collected' / 'cnf_wl'
 TOP200_FILE = REPO_ROOT / 'data' / 'top200_trains.json'
-DELAY_BETWEEN_REQUESTS = 2
+DELAY_BETWEEN_REQUESTS = 1
 MAX_RETRIES = 2
 
 # CNF/WL API config
