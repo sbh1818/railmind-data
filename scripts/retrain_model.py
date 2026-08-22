@@ -297,6 +297,17 @@ def run_retrain():
         generate_lookup(regressor, df)
     
     logger.info(f"\nDONE in {time.time()-t_start:.1f}s | MAE: {new_mae:.2f} | Deployed: {deploy}")
+    
+    # Send notification
+    try:
+        import urllib.request
+        duration = int(time.time() - t_start)
+        msg = f"Model Retrainer {'SUCCESS' if deploy else 'SKIPPED'} | MAE: {new_mae:.2f} | Accuracy: {new_acc:.1f}% | Records: {len(df):,} | {duration}s"
+        urllib.request.urlopen(
+            urllib.request.Request("https://ntfy.sh/railmind-alerts-sbh", data=msg.encode())
+        )
+    except:
+        pass
 
 
 def generate_lookup(regressor, df):

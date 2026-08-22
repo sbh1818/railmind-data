@@ -355,6 +355,17 @@ def run_collection():
     logger.info(f"  CNF/WL: {cnf_success} API calls OK, {cnf_failed} failed")
     logger.info(f"  Total requests: {delay_success + delay_failed + cnf_success + cnf_failed}")
     logger.info("=" * 60)
+    
+    # Send notification
+    try:
+        import urllib.request
+        duration = int((datetime.now() - now).total_seconds() / 60)
+        msg = f"Nightly Collector SUCCESS | Delay: {delay_success} OK, {delay_failed} failed | CNF/WL: {cnf_success} OK, {cnf_failed} failed | {duration} min"
+        urllib.request.urlopen(
+            urllib.request.Request("https://ntfy.sh/railmind-alerts-sbh", data=msg.encode())
+        )
+    except:
+        pass
 
 
 if __name__ == '__main__':
