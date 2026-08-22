@@ -2,7 +2,7 @@ name: Biweekly Model Retrainer
 
 on:
   schedule:
-    - cron: '30 10 8-14,22-28 * 0'
+    - cron: '30 10 * * 0'
   workflow_dispatch:
 
 permissions:
@@ -13,19 +13,34 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Check if 2nd or 4th Sunday
+        id: check_week
+        run: |
+          DAY=
+          if (( DAY >= 8 && DAY <= 14 )) || (( DAY >= 22 && DAY <= 28 )); then
+            echo "run=true" >> 
+          else
+            echo "run=false" >> 
+            echo "Skipping - not 2nd or 4th Sunday (day=)"
+          fi
       - name: Checkout repo
+        if: steps.check_week.outputs.run == 'true'
         uses: actions/checkout@v4
         with:
           lfs: true
       - name: Set up Python
+        if: steps.check_week.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Install dependencies
+        if: steps.check_week.outputs.run == 'true'
         run: pip install pandas numpy catboost scikit-learn requests
       - name: Run model retrainer
+        if: steps.check_week.outputs.run == 'true'
         run: python scripts/retrain_model.py
       - name: Commit updated model
+        if: steps.check_week.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
