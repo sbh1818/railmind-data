@@ -36,3 +36,7 @@ jobs:
             git commit -m "data: nightly collection"
             git push
           fi
+      - name: Notify failure
+        if: failure()
+        run: |
+          curl -d "Nightly Collector FAILED! Check logs: github.com/sbh1818/railmind-data/actions" https://ntfy.sh/railmind-alerts-sbh
