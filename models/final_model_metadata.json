@@ -2,8 +2,7 @@
   "winner": "CatBoost",
   "regression_mae": 25.85,
   "classification_accuracy": 76.89,
-  "improvement_over_previous": -0.24,
-  "trained_at": "2026-08-19 13:18:51",
+  "trained_at": "2026-08-22 10:55:34",
   "deployed": true,
-  "mae_target_met": false
+  "data_records": 963096
 }
