@@ -356,6 +356,14 @@ def run_collection():
     logger.info(f"  Total requests: {delay_success + delay_failed + cnf_success + cnf_failed}")
     logger.info("=" * 60)
     
+    # Push daily avg delays to Supabase
+    try:
+        from supabase_sync import push_delays_to_supabase
+        push_delays_to_supabase(date_iso)
+        logger.info("  Supabase: daily delays synced")
+    except Exception as e:
+        logger.warning(f"  Supabase sync failed: {e}")
+    
     # Send notification
     try:
         import urllib.request
