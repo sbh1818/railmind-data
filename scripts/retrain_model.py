@@ -296,6 +296,15 @@ def run_retrain():
         logger.info("STEP 5: Generating lookup table...")
         generate_lookup(regressor, df)
     
+    # Step 6: Regenerate frontend JSON (fares + delay history + reliability)
+    if deploy:
+        logger.info("STEP 6: Regenerating frontend data...")
+        try:
+            from regenerate_frontend import regenerate_frontend_json
+            regenerate_frontend_json()
+        except Exception as e:
+            logger.warning(f"  Frontend regeneration failed: {e}")
+    
     logger.info(f"\nDONE in {time.time()-t_start:.1f}s | MAE: {new_mae:.2f} | Deployed: {deploy}")
     
     # Send notification
