@@ -11,17 +11,17 @@ permissions:
 jobs:
   retrain:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Check if 2nd or 4th Sunday
         id: check_week
         run: |
-          DAY=
+          DAY=date +%d
           if (( DAY >= 8 && DAY <= 14 )) || (( DAY >= 22 && DAY <= 28 )); then
-            echo "run=true" >> 
+            echo "run=true" >> echo GITHUB_OUTPUT
           else
-            echo "run=false" >> 
-            echo "Skipping - not 2nd or 4th Sunday (day=)"
+            echo "run=false" >> echo GITHUB_OUTPUT
+            echo "Skipping - not 2nd or 4th Sunday (day=echo DAY)"
           fi
       - name: Checkout repo
         if: steps.check_week.outputs.run == 'true'
@@ -39,6 +39,19 @@ jobs:
       - name: Run model retrainer
         if: steps.check_week.outputs.run == 'true'
         run: python scripts/retrain_model.py
+      - name: Push frontend JSON to frontend repo
+        if: steps.check_week.outputs.run == 'true'
+        env:
+          GH_TOKEN: echo secrets.GITHUB_TOKEN
+        run: |
+          if [ -f data/trains_frontend.json ]; then
+            CONTENT=ase64 -w 0 data/trains_frontend.json
+            SHA=curl -s -H "Authorization: token echo GH_TOKEN" https://api.github.com/repos/sbh1818/railmind-frontend/contents/src/data/trains.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null
+            curl -s -X PUT -H "Authorization: token echo GH_TOKEN" \
+              -d "{\"message\":\"data: refresh trains.json from retrainer\",\"content\":\"echo CONTENT\",\"sha\":\"echo SHA\"}" \
+              https://api.github.com/repos/sbh1818/railmind-frontend/contents/src/data/trains.json
+            echo "Frontend JSON pushed"
+          fi
       - name: Commit updated model
         if: steps.check_week.outputs.run == 'true'
         run: |
@@ -51,3 +64,7 @@ jobs:
             git commit -m "model: retrained"
             git push
           fi
+      - name: Notify failure
+        if: failure()
+        run: |
+          curl -d "Model Retrainer FAILED! Check logs: github.com/sbh1818/railmind-data/actions" https://ntfy.sh/railmind-alerts-sbh
