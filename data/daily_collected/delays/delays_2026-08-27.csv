@@ -52,21 +52,21 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12626,Kerala Express,SEGM,Sevagram,10,12:43,12:45,64,66,4,1166.0,2
 2026-08-27,12626,Kerala Express,CD,Chandrapur,11,14:13,14:15,81,83,1,1287.0,2
 2026-08-27,12626,Kerala Express,BPQ,Balharshah,12,15:10,15:15,43,49,1,1301.0,2
-2026-08-27,12626,Kerala Express,RDM,Ramagundam,14,16:59,17:00,95,99,3,1443.0,2
+2026-08-27,12626,Kerala Express,RDM,Ramagundam,14,16:59,17:00,95,99,2,1443.0,2
 2026-08-27,12626,Kerala Express,WL,Warangal,15,18:28,18:30,104,110,1,1544.0,2
 2026-08-27,12626,Kerala Express,BZA,Vijayawada Jn,16,22:15,22:25,68,71,8,1751.0,2
-2026-08-27,12626,Kerala Express,NLR,Nellore,17,01:53,01:55,66,67,3,2005.0,3
+2026-08-27,12626,Kerala Express,NLR,Nellore,17,01:53,01:55,66,67,4,2005.0,3
 2026-08-27,12626,Kerala Express,GDR,Gudur Jn,18,02:33,02:35,71,74,1,2044.0,3
 2026-08-27,12626,Kerala Express,RU,Renigunta Jn,19,04:00,04:10,64,74,2,2127.0,3
 2026-08-27,12626,Kerala Express,TPTY,Tirupati,20,04:35,04:40,79,84,1,2137.0,3
-2026-08-27,12626,Kerala Express,CTO,Chittoor,21,05:53,05:55,74,76,1,2208.0,3
+2026-08-27,12626,Kerala Express,CTO,Chittoor,21,05:53,05:55,74,76,2,2208.0,3
 2026-08-27,12626,Kerala Express,KPD,Katpadi Jn,22,06:45,06:50,65,68,5,2241.0,3
 2026-08-27,12626,Kerala Express,JTJ,Jolarpettai,23,08:05,08:10,64,73,1,2325.0,3
 2026-08-27,12626,Kerala Express,SA,Salem Jn,24,09:37,09:40,66,71,4,2445.0,3
 2026-08-27,12626,Kerala Express,ED,Erode Jn,25,10:45,10:55,70,71,1,2507.0,3
 2026-08-27,12626,Kerala Express,TUP,Tiruppur,26,11:38,11:40,71,74,1,2557.0,3
 2026-08-27,12626,Kerala Express,CBE,Coimbatore Jn,27,12:30,12:35,70,76,1,2608.0,3
-2026-08-27,12626,Kerala Express,PGT,Palakkad Jn,28,13:52,13:55,58,69,3,2662.0,3
+2026-08-27,12626,Kerala Express,PGT,Palakkad Jn,28,13:52,13:55,58,69,2,2662.0,3
 2026-08-27,12626,Kerala Express,OTP,Ottappalam,29,14:19,14:20,70,75,2,2694.0,3
 2026-08-27,12626,Kerala Express,TCR,Thrisur,30,15:21,15:23,67,69,1,2739.0,3
 2026-08-27,12626,Kerala Express,AWY,Aluva,31,16:08,16:10,61,63,1,2794.0,3
@@ -89,12 +89,12 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,11301,Udyan Express,URI,Uruli,6,12:13,12:15,25,26,2,220.0,1
 2026-08-27,11301,Udyan Express,DD,Daund Jn,7,12:55,13:00,28,29,3,267.0,1
 2026-08-27,11301,Udyan Express,KWV,Kurduvadi,8,14:13,14:15,23,27,3,376.0,1
-2026-08-27,11301,Udyan Express,SUR,Solapur Jn,9,15:35,15:40,22,24,1,455.0,1
+2026-08-27,11301,Udyan Express,SUR,Solapur Jn,9,15:35,15:40,22,24,3,455.0,1
 2026-08-27,11301,Udyan Express,AKOR,Akalkot Road,10,16:11,16:13,32,35,1,490.0,1
-2026-08-27,11301,Udyan Express,DUD,Dudhani,11,16:35,16:37,34,37,2,518.0,1
+2026-08-27,11301,Udyan Express,DUD,Dudhani,11,16:35,16:37,34,37,1,518.0,1
 2026-08-27,11301,Udyan Express,GUR,Ganagapur Road,12,16:58,17:00,35,38,2,541.0,1
 2026-08-27,11301,Udyan Express,KLBG,Kalaburagi,13,17:30,17:35,29,35,1,568.0,1
-2026-08-27,11301,Udyan Express,SDB,Shahabad,14,17:58,18:00,37,42,3,594.0,1
+2026-08-27,11301,Udyan Express,SDB,Shahabad,14,17:58,18:00,37,42,2,594.0,1
 2026-08-27,11301,Udyan Express,WADI,Wadi,15,18:30,18:35,22,26,2,605.0,1
 2026-08-27,11301,Udyan Express,NW,Nalwar,16,18:49,18:50,28,30,2,618.0,1
 2026-08-27,11301,Udyan Express,YG,Yadgir,17,19:08,19:10,28,32,1,643.0,1
@@ -194,9 +194,9 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12617,Mangladweep Exp,MAJN,Mangaluru Jn,20,18:55,19:00,16,28,1,415.0,1
 2026-08-27,12617,Mangladweep Exp,UD,Udupi,21,20:30,20:32,22,37,2,497.0,1
 2026-08-27,12617,Mangladweep Exp,KUDA,Kundapura,22,21:08,21:10,38,42,2,546.0,1
-2026-08-27,12617,Mangladweep Exp,BTJL,Bhatkal,23,22:08,22:10,33,36,1,610.0,1
+2026-08-27,12617,Mangladweep Exp,BTJL,Bhatkal,23,22:08,22:10,33,36,2,610.0,1
 2026-08-27,12617,Mangladweep Exp,KT,Kumta,24,22:56,22:58,43,47,1,691.0,1
-2026-08-27,12617,Mangladweep Exp,KAWR,Karwar,25,23:52,23:54,53,55,1,764.0,1
+2026-08-27,12617,Mangladweep Exp,KAWR,Karwar,25,23:52,23:54,53,55,2,764.0,1
 2026-08-27,12617,Mangladweep Exp,MAO,Madgaon,26,01:10,01:20,51,55,1,846.0,2
 2026-08-27,12617,Mangladweep Exp,THVM,Thivim,27,02:18,02:20,90,93,1,910.0,2
 2026-08-27,12617,Mangladweep Exp,KKW,Kankavali,28,03:44,03:46,87,92,1,1024.0,2
@@ -430,7 +430,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12802,Purushottam Exp,SSM,Sasaram,9,11:04,11:06,22,23,3,873.0,2
 2026-08-27,12802,Purushottam Exp,DOS,Dehri On Sone,10,11:20,11:22,21,22,4,891.0,2
 2026-08-27,12802,Purushottam Exp,AUBR,Anugraha N Road,11,11:38,11:40,23,24,3,908.0,2
-2026-08-27,12802,Purushottam Exp,GAYA,Gaya Jn,12,12:35,12:40,22,24,2,976.0,2
+2026-08-27,12802,Purushottam Exp,GAYA,Gaya Jn,12,12:35,12:40,22,24,3,976.0,2
 2026-08-27,12802,Purushottam Exp,PRP,Paharpur,13,13:18,13:20,17,20,2,1008.0,2
 2026-08-27,12802,Purushottam Exp,KQR,Koderma Jn,14,13:55,13:57,31,33,3,1052.0,2
 2026-08-27,12802,Purushottam Exp,HZD,Hazaribagh Rd,15,14:25,14:27,38,39,3,1101.0,2
@@ -438,10 +438,10 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12802,Purushottam Exp,GMO,Nsc Bose J Gomo,17,15:20,15:25,22,30,2,1146.0,2
 2026-08-27,12802,Purushottam Exp,CRP,Chandrapura Jn,18,15:46,15:48,35,37,1,1163.0,2
 2026-08-27,12802,Purushottam Exp,BKSC,Bokaro Stl City,19,16:20,16:25,28,30,2,1178.0,2
-2026-08-27,12802,Purushottam Exp,PRR,Purulia Jn,20,17:43,17:45,18,23,1,1239.0,2
+2026-08-27,12802,Purushottam Exp,PRR,Purulia Jn,20,17:43,17:45,18,23,3,1239.0,2
 2026-08-27,12802,Purushottam Exp,BBM,Barabhum,21,18:14,18:15,22,23,1,1270.0,2
 2026-08-27,12802,Purushottam Exp,CNI,Chandil Jn,22,18:48,18:50,19,21,3,1293.0,2
-2026-08-27,12802,Purushottam Exp,TATA,Tatanagar Jn,23,19:55,20:05,36,38,4,1329.0,2
+2026-08-27,12802,Purushottam Exp,TATA,Tatanagar Jn,23,19:55,20:05,36,38,5,1329.0,2
 2026-08-27,12802,Purushottam Exp,GTS,Ghatsila,24,20:41,20:43,45,46,3,1365.0,2
 2026-08-27,12802,Purushottam Exp,HIJ,Hijli,25,22:35,22:45,40,42,2,1463.0,2
 2026-08-27,12802,Purushottam Exp,BLS,Balasore,26,00:10,00:15,40,41,2,1575.0,3
@@ -936,21 +936,21 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12860,Gitanjali Exp,KYN,Kalyan Jn,24,20:02,20:05,109,109,5,1916.0,2
 2026-08-27,12860,Gitanjali Exp,DR,Dadar,25,20:47,20:50,115,116,12,1961.0,2
 2026-08-27,12860,Gitanjali Exp,CSMT,C Shivaji Mah T,26,21:20,,111,,14,1969.0,2
-2026-08-27,12801,Purushottam Sf,KUR,Khurda Road JN,2,22:30,22:35,39,42,1,44.0,1
+2026-08-27,12801,Purushottam Sf,KUR,Khurda Road JN,2,22:30,22:35,39,42,2,44.0,1
 2026-08-27,12801,Purushottam Sf,BBS,Bhubaneswar,3,22:55,23:00,46,46,1,63.0,1
-2026-08-27,12801,Purushottam Sf,CTC,Cuttack,4,23:25,23:30,51,55,1,91.0,1
+2026-08-27,12801,Purushottam Sf,CTC,Cuttack,4,23:25,23:30,51,55,2,91.0,1
 2026-08-27,12801,Purushottam Sf,JJKR,Jajpur K Road,5,00:23,00:25,64,65,2,163.0,2
 2026-08-27,12801,Purushottam Sf,BHC,Bhadrak,6,01:18,01:20,40,44,3,206.0,2
 2026-08-27,12801,Purushottam Sf,BLS,Balasore,7,01:55,02:00,58,60,3,268.0,2
 2026-08-27,12801,Purushottam Sf,HIJ,Hijli,8,03:30,03:40,56,57,1,380.0,2
 2026-08-27,12801,Purushottam Sf,GTS,Ghatsila,9,04:50,04:52,52,53,2,478.0,2
-2026-08-27,12801,Purushottam Sf,TATA,Tatanagar Jn,10,06:12,06:22,29,34,2,515.0,2
+2026-08-27,12801,Purushottam Sf,TATA,Tatanagar Jn,10,06:12,06:22,29,34,3,515.0,2
 2026-08-27,12801,Purushottam Sf,CNI,Chandil Jn,11,07:23,07:25,33,33,2,551.0,2
 2026-08-27,12801,Purushottam Sf,BBM,Barabhum,12,07:44,07:45,31,35,2,573.0,2
 2026-08-27,12801,Purushottam Sf,PRR,Purulia Jn,13,08:18,08:20,37,43,3,605.0,2
 2026-08-27,12801,Purushottam Sf,BKSC,Bokaro Stl City,14,09:40,09:45,29,32,1,666.0,2
 2026-08-27,12801,Purushottam Sf,CRP,Chandrapura Jn,15,10:26,10:28,18,26,2,681.0,2
-2026-08-27,12801,Purushottam Sf,GMO,Nsc Bose J Gomo,16,10:50,10:55,27,32,4,698.0,2
+2026-08-27,12801,Purushottam Sf,GMO,Nsc Bose J Gomo,16,10:50,10:55,27,32,3,698.0,2
 2026-08-27,12801,Purushottam Sf,PNME,Parasnath,17,11:08,11:10,34,36,3,716.0,2
 2026-08-27,12801,Purushottam Sf,HZD,Hazaribagh Rd,18,11:30,11:32,32,34,2,743.0,2
 2026-08-27,12801,Purushottam Sf,KQR,Koderma Jn,19,12:00,12:02,40,43,4,791.0,2
@@ -960,7 +960,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12801,Purushottam Sf,DOS,Dehri On Sone,23,14:40,14:42,52,54,3,953.0,2
 2026-08-27,12801,Purushottam Sf,SSM,Sasaram,24,14:56,14:58,57,59,2,971.0,2
 2026-08-27,12801,Purushottam Sf,BBU,Bhabua Road,25,15:24,15:26,68,70,2,1018.0,2
-2026-08-27,12801,Purushottam Sf,DDU,Dd Upadhyaya Jn,26,16:48,16:55,40,39,8,1071.0,2
+2026-08-27,12801,Purushottam Sf,DDU,Dd Upadhyaya Jn,26,16:48,16:55,40,39,4,1071.0,2
 2026-08-27,12801,Purushottam Sf,CAR,Chunar,27,17:38,17:40,34,36,3,1102.0,2
 2026-08-27,12801,Purushottam Sf,MZP,Mirzapur,28,18:03,18:05,34,39,3,1133.0,2
 2026-08-27,12801,Purushottam Sf,PRYJ,Prayagraj Jn.,29,19:20,19:30,33,34,3,1223.0,2
@@ -1209,13 +1209,13 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,22692,Sbc Rajdhani,ET,Itarsi Jn,6,05:23,05:25,11,13,4,786.0,2
 2026-08-27,22692,Sbc Rajdhani,NGP,Nagpur,7,09:25,09:30,7,14,2,1083.0,2
 2026-08-27,22692,Sbc Rajdhani,BPQ,Balharshah,8,12:15,12:20,11,14,1,1294.0,2
-2026-08-27,22692,Sbc Rajdhani,KZJ,Kazipet Jn,9,15:08,15:10,48,50,2,1528.0,2
+2026-08-27,22692,Sbc Rajdhani,KZJ,Kazipet Jn,9,15:08,15:10,48,50,3,1528.0,2
 2026-08-27,22692,Sbc Rajdhani,SC,Secunderabad Jn,10,17:15,17:25,47,48,10,1660.0,2
 2026-08-27,22692,Sbc Rajdhani,SEM,Seram,11,19:29,19:30,64,66,1,1806.0,2
 2026-08-27,22692,Sbc Rajdhani,RC,Raichur,13,21:38,21:40,65,70,1,1951.0,2
 2026-08-27,22692,Sbc Rajdhani,GTL,Guntakal Jn,14,23:35,23:40,48,53,1,2072.0,2
 2026-08-27,22692,Sbc Rajdhani,SSPN,Sai P Nilayam,15,01:58,02:00,43,45,1,2206.0,3
-2026-08-27,22692,Sbc Rajdhani,SBC,KSR Bengaluru,16,05:20,,1,,1,2365.0,3
+2026-08-27,22692,Sbc Rajdhani,SBC,KSR Bengaluru,16,05:20,,1,,2,2365.0,3
 2026-08-27,12723,Telangana Sf Exp,SC,Secunderabad Jn,2,06:20,06:25,81,86,1,10.0,1
 2026-08-27,12723,Telangana Sf Exp,KZJ,Kazipet Jn,3,07:53,07:55,110,112,1,142.0,1
 2026-08-27,12723,Telangana Sf Exp,RDM,Ramagundam,4,09:29,09:30,112,114,1,234.0,1
@@ -1272,9 +1272,9 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12792,Secunderabad Ex,MCI,Manchiryal,24,16:34,16:35,74,77,2,1592.0,2
 2026-08-27,12792,Secunderabad Ex,RDM,Ramagundam,25,16:44,16:45,83,85,2,1605.0,2
 2026-08-27,12792,Secunderabad Ex,PDPL,Peddapalli Jn,26,16:59,17:00,88,90,2,1623.0,2
-2026-08-27,12792,Secunderabad Ex,KZJ,Kazipet Jn,28,18:23,18:25,87,90,2,1698.0,2
-2026-08-27,12792,Secunderabad Ex,SC,Secunderabad Jn,29,21:30,,42,,6,1830.0,2
-2026-08-27,22691,Rajdhani Exp,SSPN,Sai P Nilayam,2,22:13,22:15,31,35,1,159.0,1
+2026-08-27,12792,Secunderabad Ex,KZJ,Kazipet Jn,28,18:23,18:25,87,90,3,1698.0,2
+2026-08-27,12792,Secunderabad Ex,SC,Secunderabad Jn,29,21:30,,42,,8,1830.0,2
+2026-08-27,22691,Rajdhani Exp,SSPN,Sai P Nilayam,2,22:13,22:15,31,35,2,159.0,1
 2026-08-27,22691,Rajdhani Exp,GTL,Guntakal Jn,3,00:40,00:45,22,30,1,293.0,2
 2026-08-27,22691,Rajdhani Exp,RC,Raichur,4,02:28,02:30,23,28,2,414.0,2
 2026-08-27,22691,Rajdhani Exp,SEM,Seram,6,04:30,04:31,28,32,2,559.0,2
@@ -1883,20 +1883,20 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12786,Kacheguda Exp,MBNR,Mahbubnagar,19,03:18,03:20,34,34,2,663.0,2
 2026-08-27,12786,Kacheguda Exp,JCL,Jadcherla,20,03:39,03:40,32,32,1,680.0,2
 2026-08-27,12786,Kacheguda Exp,KCG,Kacheguda,21,05:40,,4,,4,768.0,2
-2026-08-27,12759,Charminar Sf Exp,SPE,Sullurupeta,3,19:48,19:50,14,15,1,111.0,1
-2026-08-27,12759,Charminar Sf Exp,NYP,Nayudupeta,4,20:13,20:15,13,15,1,138.0,1
-2026-08-27,12759,Charminar Sf Exp,GDR,Gudur Jn,5,20:38,20:40,11,19,2,166.0,1
-2026-08-27,12759,Charminar Sf Exp,NLR,Nellore,6,21:13,21:15,25,26,2,204.0,1
-2026-08-27,12759,Charminar Sf Exp,KVZ,Kavali,7,21:48,21:50,28,28,2,255.0,1
-2026-08-27,12759,Charminar Sf Exp,OGL,Ongole,8,22:43,22:45,26,26,1,320.0,1
-2026-08-27,12759,Charminar Sf Exp,CLX,Chirala,9,23:28,23:30,19,20,3,370.0,1
-2026-08-27,12759,Charminar Sf Exp,TEL,Tenali Jn,10,00:13,00:15,13,15,4,427.0,2
-2026-08-27,12759,Charminar Sf Exp,BZA,Vijayawada Jn,11,01:00,01:10,10,13,10,459.0,2
-2026-08-27,12759,Charminar Sf Exp,KMT,Khammam,12,02:39,02:40,54,55,3,560.0,2
-2026-08-27,12759,Charminar Sf Exp,MABD,Mahbubabad,14,03:19,03:20,54,56,2,607.0,2
-2026-08-27,12759,Charminar Sf Exp,WL,Warangal,15,04:18,04:20,56,63,4,667.0,2
-2026-08-27,12759,Charminar Sf Exp,KZJ,Kazipet Jn,16,04:38,04:40,68,71,3,679.0,2
-2026-08-27,12759,Charminar Sf Exp,SC,Secunderabad Jn,17,06:50,06:55,50,49,9,809.0,2
+2026-08-27,12759,Charminar Sf Exp,SPE,Sullurupeta,2,19:48,19:50,14,15,1,112.0,1
+2026-08-27,12759,Charminar Sf Exp,NYP,Nayudupeta,3,20:13,20:15,13,15,1,139.0,1
+2026-08-27,12759,Charminar Sf Exp,GDR,Gudur Jn,4,20:38,20:40,11,19,2,167.0,1
+2026-08-27,12759,Charminar Sf Exp,NLR,Nellore,5,21:13,21:15,25,26,2,205.0,1
+2026-08-27,12759,Charminar Sf Exp,KVZ,Kavali,6,21:48,21:50,28,28,2,256.0,1
+2026-08-27,12759,Charminar Sf Exp,OGL,Ongole,7,22:43,22:45,26,26,1,321.0,1
+2026-08-27,12759,Charminar Sf Exp,CLX,Chirala,8,23:28,23:30,19,20,3,371.0,1
+2026-08-27,12759,Charminar Sf Exp,TEL,Tenali Jn,9,00:13,00:15,13,15,4,428.0,2
+2026-08-27,12759,Charminar Sf Exp,BZA,Vijayawada Jn,10,01:00,01:10,10,13,10,460.0,2
+2026-08-27,12759,Charminar Sf Exp,KMT,Khammam,11,02:39,02:40,54,55,3,560.0,2
+2026-08-27,12759,Charminar Sf Exp,MABD,Mahbubabad,13,03:19,03:20,54,56,2,607.0,2
+2026-08-27,12759,Charminar Sf Exp,WL,Warangal,14,04:18,04:20,56,63,4,667.0,2
+2026-08-27,12759,Charminar Sf Exp,KZJ,Kazipet Jn,15,04:38,04:40,68,71,3,677.0,2
+2026-08-27,12759,Charminar Sf Exp,SC,Secunderabad Jn,16,06:50,06:55,50,49,9,809.0,2
 2026-08-27,12785,Kcg Ap Sf Exp,JCL,Jadcherla,2,20:09,20:10,18,19,2,88.0,1
 2026-08-27,12785,Kcg Ap Sf Exp,MBNR,Mahbubnagar,3,20:23,20:25,20,21,1,106.0,1
 2026-08-27,12785,Kcg Ap Sf Exp,GWD,Gadwal,4,21:34,21:35,42,44,1,181.0,1
@@ -1926,7 +1926,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12471,Swaraj Express,GDA,Godhra Jn,8,17:12,17:14,3,8,3,455.0,1
 2026-08-27,12471,Swaraj Express,DHD,Dahod,9,18:00,18:02,14,16,3,529.0,1
 2026-08-27,12471,Swaraj Express,MGN,Meghnagar,10,18:26,18:28,15,15,1,562.0,1
-2026-08-27,12471,Swaraj Express,BMI,Bamnia,11,19:00,19:02,14,14,1,597.0,1
+2026-08-27,12471,Swaraj Express,BMI,Bamnia,11,19:00,19:02,14,14,2,597.0,1
 2026-08-27,12471,Swaraj Express,RTM,Ratlam Jn,12,19:45,19:55,13,15,5,642.0,1
 2026-08-27,12471,Swaraj Express,NAD,Nagda Jn,13,20:43,20:48,1,4,1,684.0,1
 2026-08-27,12471,Swaraj Express,VMA,Vikramgarh Alot,14,21:13,21:15,6,7,2,724.0,1
@@ -2821,8 +2821,8 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12397,Mahabodhi Exp,BBU,Bhabua Road,8,16:00,16:02,38,40,2,151.0,1
 2026-08-27,12397,Mahabodhi Exp,DDU,Dd Upadhyaya Jn,10,17:13,17:20,19,18,3,204.0,1
 2026-08-27,12397,Mahabodhi Exp,BDL,Vindhyachal,11,18:30,18:32,16,19,3,274.0,1
-2026-08-27,12397,Mahabodhi Exp,PRYJ,Prayagraj Jn.,12,19:30,19:40,27,27,2,356.0,1
-2026-08-27,12397,Mahabodhi Exp,BRE,Bharwari,13,20:08,20:10,32,35,3,393.0,1
+2026-08-27,12397,Mahabodhi Exp,PRYJ,Prayagraj Jn.,12,19:30,19:40,27,27,3,356.0,1
+2026-08-27,12397,Mahabodhi Exp,BRE,Bharwari,13,20:08,20:10,32,35,2,393.0,1
 2026-08-27,12397,Mahabodhi Exp,CNB,Kanpur Central,14,22:05,22:10,33,38,2,550.0,1
 2026-08-27,12397,Mahabodhi Exp,ALJN,Aligarh Jn,15,01:28,01:30,46,49,4,858.0,2
 2026-08-27,12397,Mahabodhi Exp,NDLS,New Delhi,16,04:10,,9,,9,989.0,2
@@ -2961,7 +2961,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12631,Nellai Sf Exp,CGL,Chengalpattu,3,21:43,21:45,5,7,6,56.0,1
 2026-08-27,12631,Nellai Sf Exp,MLMR,Melmaruvattur,4,22:08,22:10,20,20,3,92.0,1
 2026-08-27,12631,Nellai Sf Exp,TMV,Tindivanam,5,22:33,22:35,24,25,1,122.0,1
-2026-08-27,12631,Nellai Sf Exp,VM,Villupuram Jn,6,23:28,23:30,6,13,5,159.0,1
+2026-08-27,12631,Nellai Sf Exp,VM,Villupuram Jn,6,23:28,23:30,6,13,4,159.0,1
 2026-08-27,12631,Nellai Sf Exp,VRI,Vridhachalam Jn,7,00:12,00:14,21,21,3,213.0,2
 2026-08-27,12631,Nellai Sf Exp,TPJ,Tiruchchirapali,8,02:05,02:10,4,11,4,336.0,2
 2026-08-27,12631,Nellai Sf Exp,DG,Dindigul Jn,9,03:07,03:10,7,9,4,431.0,2
@@ -3197,9 +3197,9 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12487,Seemanchal Exp,DLN,Dildarnagar Jn,13,07:09,07:11,24,24,3,546.0,2
 2026-08-27,12487,Seemanchal Exp,DDU,Dd Upadhyaya Jn,14,09:23,09:30,,5,4,604.0,2
 2026-08-27,12487,Seemanchal Exp,MZP,Mirzapur,15,10:28,10:30,10,13,3,667.0,2
-2026-08-27,12487,Seemanchal Exp,PRYJ,Prayagraj Jn.,16,11:40,11:42,14,18,2,757.0,2
+2026-08-27,12487,Seemanchal Exp,PRYJ,Prayagraj Jn.,16,11:40,11:42,14,18,3,757.0,2
 2026-08-27,12487,Seemanchal Exp,CNB,Kanpur Central,17,14:15,14:20,22,27,1,952.0,2
-2026-08-27,12487,Seemanchal Exp,TDL,Tundla Jn,18,17:30,17:32,10,20,3,1183.0,2
+2026-08-27,12487,Seemanchal Exp,TDL,Tundla Jn,18,17:30,17:32,10,20,4,1183.0,2
 2026-08-27,12487,Seemanchal Exp,ALJN,Aligarh Jn,19,18:23,18:25,27,29,4,1261.0,2
 2026-08-27,12487,Seemanchal Exp,GZB,Ghaziabad,20,20:13,20:15,10,16,3,1367.0,2
 2026-08-27,12487,Seemanchal Exp,ANVT,Anand Vihar TRM,21,20:50,,13,,7,1379.0,2
@@ -3458,7 +3458,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12609,Mysuru Express,PANP,Pandavapura,25,21:44,21:45,52,53,2,477.0,1
 2026-08-27,12609,Mysuru Express,MYS,Mysuru Jn,26,22:50,23:00,13,,1,496.0,1
 2026-08-27,12714,Satavahana Sf,CHZ,Charlapalli,2,16:44,16:45,13,14,3,13.0,1
-2026-08-27,12714,Satavahana Sf,KZJ,Kazipet Jn,4,18:13,18:15,30,33,1,132.0,1
+2026-08-27,12714,Satavahana Sf,KZJ,Kazipet Jn,4,18:13,18:15,30,33,2,132.0,1
 2026-08-27,12714,Satavahana Sf,WL,Warangal,5,18:34,18:35,44,47,1,142.0,1
 2026-08-27,12714,Satavahana Sf,KDM,Kesamudram,6,19:04,19:05,40,43,1,188.0,1
 2026-08-27,12714,Satavahana Sf,MABD,Mahbubabad,7,19:19,19:20,47,48,1,203.0,1
@@ -3726,7 +3726,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12261,Howrah Duronto,BSL,Bhusaval Jn,3,22:55,23:00,205,208,6,445.0,1
 2026-08-27,12261,Howrah Duronto,NGP,Nagpur,5,04:10,04:15,201,205,4,837.0,2
 2026-08-27,12261,Howrah Duronto,R,Raipur Jn,6,08:13,08:15,198,204,6,1139.0,2
-2026-08-27,12261,Howrah Duronto,BSP,Bilaspur Jn,7,09:50,10:00,215,227,2,1250.0,2
+2026-08-27,12261,Howrah Duronto,BSP,Bilaspur Jn,7,09:50,10:00,215,227,3,1250.0,2
 2026-08-27,12261,Howrah Duronto,TATA,Tatanagar Jn,8,16:10,16:20,335,335,4,1719.0,2
 2026-08-27,12261,Howrah Duronto,HWH,Howrah Jn,9,20:40,,356,,24,1968.0,2
 2026-08-27,22436,Vande Bharat Ex,CNB,Kanpur Central,2,10:08,10:10,4,9,5,441.0,1
@@ -3882,7 +3882,7 @@ collection_date,train_no,train_name,station_code,station_name,stop_sequence,sche
 2026-08-27,12260,Sdah Duronto,LHU,Loharu,6,15:55,15:58,25,25,1,288.0,1
 2026-08-27,12260,Sdah Duronto,NDLS,New Delhi,7,19:30,19:45,,9,13,463.0,1
 2026-08-27,12260,Sdah Duronto,CNB,Kanpur Central,8,00:35,00:40,24,30,5,903.0,2
-2026-08-27,12260,Sdah Duronto,DDU,Dd Upadhyaya Jn,9,04:33,04:40,35,36,3,1251.0,2
+2026-08-27,12260,Sdah Duronto,DDU,Dd Upadhyaya Jn,9,04:33,04:40,35,36,1,1251.0,2
 2026-08-27,12260,Sdah Duronto,KQR,Koderma Jn,10,07:55,07:57,48,48,3,1530.0,2
 2026-08-27,12260,Sdah Duronto,DHN,Dhanbad Jn,11,09:12,09:17,53,54,1,1653.0,2
 2026-08-27,12260,Sdah Duronto,SDAH,Sealdah,12,13:30,,38,,14,1918.0,2
