@@ -1,0 +1,1 @@
+snapshot_datetime,snapshot_date,train_no,train_name,source_station,destination_station,travel_class,quota,journey_date,days_before_journey,journey_day_of_week,journey_month,journey_is_weekend,availability_display,status_type,position_number,prediction_text,prediction_percentage,confirm_status,gradient,cache_time,batch_type
