@@ -2,6 +2,7 @@
 Push daily average delays to Supabase + cleanup old rows (keep only 14 days).
 """
 import csv
+import os
 import logging
 from pathlib import Path
 from datetime import datetime, timedelta
@@ -13,8 +14,10 @@ logger = logging.getLogger(__name__)
 REPO_ROOT = Path(__file__).resolve().parent.parent
 COLLECTED_DIR = REPO_ROOT / 'data' / 'daily_collected' / 'delays'
 
-SUPABASE_URL = "https://lnshyxvaczhaenqcdyli.supabase.co"
-SUPABASE_KEY = "sb_publishable_dsYw_4NxtNh4O2n4hkJWew_znH3nHpf"
+SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
+if not SUPABASE_URL or not SUPABASE_KEY:
+    raise RuntimeError("SUPABASE_URL and SUPABASE_KEY must be set as environment variables")
 HEADERS = {
     "apikey": SUPABASE_KEY,
     "Authorization": f"Bearer {SUPABASE_KEY}",

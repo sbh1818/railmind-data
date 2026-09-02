@@ -293,10 +293,13 @@ def regenerate_frontend_json():
     # Send notification
     try:
         import urllib.request
+        import os
         msg = f"Frontend JSON regenerated | {len(trains)} trains | {size_kb:.0f} KB | Fares + delays + reliability updated"
-        urllib.request.urlopen(
-            urllib.request.Request("https://ntfy.sh/railmind-alerts-sbh", data=msg.encode())
-        )
+        ntfy_topic = os.environ.get("NTFY_TOPIC", "")
+        if ntfy_topic:
+            urllib.request.urlopen(
+                urllib.request.Request(f"https://ntfy.sh/{ntfy_topic}", data=msg.encode())
+            )
     except:
         pass
 

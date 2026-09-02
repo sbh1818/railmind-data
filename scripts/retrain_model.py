@@ -310,11 +310,14 @@ def run_retrain():
     # Send notification
     try:
         import urllib.request
+        import os
         duration = int(time.time() - t_start)
         msg = f"Model Retrainer {'SUCCESS' if deploy else 'SKIPPED'} | MAE: {new_mae:.2f} | Accuracy: {new_acc:.1f}% | Records: {len(df):,} | {duration}s"
-        urllib.request.urlopen(
-            urllib.request.Request("https://ntfy.sh/railmind-alerts-sbh", data=msg.encode())
-        )
+        ntfy_topic = os.environ.get("NTFY_TOPIC", "")
+        if ntfy_topic:
+            urllib.request.urlopen(
+                urllib.request.Request(f"https://ntfy.sh/{ntfy_topic}", data=msg.encode())
+            )
     except:
         pass
 

@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: pip install requests
       - name: Run nightly collector
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python scripts/collect_delays.py
       - name: Commit collected data
         run: |
@@ -38,5 +42,9 @@ jobs:
           fi
       - name: Notify failure
         if: failure()
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: |
-          curl -d "Nightly Collector FAILED! Check logs: github.com/sbh1818/railmind-data/actions" https://ntfy.sh/railmind-alerts-sbh
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -d "Nightly Collector FAILED! Check logs: github.com/sbh1818/railmind-data/actions" "https://ntfy.sh/$NTFY_TOPIC"
+          fi

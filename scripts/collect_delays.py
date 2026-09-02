@@ -367,11 +367,14 @@ def run_collection():
     # Send notification
     try:
         import urllib.request
+        import os
         duration = int((datetime.now() - now).total_seconds() / 60)
         msg = f"Nightly Collector SUCCESS | Delay: {delay_success} OK, {delay_failed} failed | CNF/WL: {cnf_success} OK, {cnf_failed} failed | {duration} min"
-        urllib.request.urlopen(
-            urllib.request.Request("https://ntfy.sh/railmind-alerts-sbh", data=msg.encode())
-        )
+        ntfy_topic = os.environ.get("NTFY_TOPIC", "")
+        if ntfy_topic:
+            urllib.request.urlopen(
+                urllib.request.Request(f"https://ntfy.sh/{ntfy_topic}", data=msg.encode())
+            )
     except:
         pass
 
