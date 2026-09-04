@@ -1,0 +1,89 @@
+name: Delay Collector
+
+on:
+  schedule:
+    - cron: '30 8 * * *'   # 08:30 UTC = 2:00 PM IST, daily (gated below)
+  workflow_dispatch:        # manual trigger anytime
+
+permissions:
+  contents: read
+
+jobs:
+  # Gate: run only every 3rd day from the fixed start date (2026-09-05).
+  check_day:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+    steps:
+      - name: Every-3rd-day gate
+        id: gate
+        run: |
+          START=$(date -u -d '2026-09-05' +%s)
+          NOW=$(date -u +%s)
+          DAYS=$(( (NOW - START) / 86400 ))
+          # Always run on manual dispatch; otherwise only when days % 3 == 0
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$DAYS" -ge 0 ] && [ $((DAYS % 3)) -eq 0 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Not a run day (days since start = $DAYS)"
+          fi
+
+  # Stage 1: collect raw observations in 3 parallel batches
+  collect:
+    needs: check_day
+    if: needs.check_day.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install requests ntes-client
+      - name: Collect delays (batch ${{ matrix.batch }}/3)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: python scripts/collect_ntes_delays.py --batch ${{ matrix.batch }} --total 3
+
+  # Stage 2: recompute 30-day averages after all batches finish + notify
+  aggregate:
+    needs: collect
+    if: needs.check_day.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install requests ntes-client
+      - name: Aggregate 30-day averages + notify
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python scripts/collect_ntes_delays.py --aggregate
+
+  # Failure alert
+  notify_failure:
+    needs: [collect, aggregate]
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify failure
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -d "Delay Collector FAILED! Check: github.com/sbh1818/railmind-data/actions" "https://ntfy.sh/$NTFY_TOPIC"
+          fi
