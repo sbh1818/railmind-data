@@ -51,6 +51,8 @@ HEADERS = {
 
 # delay train list (built from the priority analysis; one train_no per line)
 DELAY_LIST = Path(__file__).resolve().parent.parent / "data" / "delay_trains.json"
+# raw per-run delay CSVs (permanent ML dataset, committed to git)
+RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "daily_collected" / "ntes_delays"
 
 PAUSE = 1.5              # base seconds between calls
 JITTER = 1.0            # up to +1s random
@@ -101,52 +103,36 @@ def fetch_run(client, train_no, date_str):
     return out or None
 
 
-def upsert_observations(rows, batch=300):
-    url = f"{SUPABASE_URL}/rest/v1/delay_observations"
-    ok = 0
-    for i in range(0, len(rows), batch):
-        chunk = rows[i:i + batch]
-        resp = requests.post(url, headers=HEADERS, data=json.dumps(chunk))
-        if resp.status_code in (200, 201):
-            ok += len(chunk)
-        else:
-            logger.warning(f"  upsert error {resp.status_code}: {resp.text[:150]}")
-        time.sleep(0.2)
-    return ok
-
-
 def compute_30d_averages():
-    """Recompute station_delay_30d from the last 30 days of delay_observations.
-    Aggregates per (train_no, station_code): avg arrival delay + sample count."""
-    logger.info("Computing 30-day station-wise averages...")
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%d")
-
-    obs_url = f"{SUPABASE_URL}/rest/v1/delay_observations"
-    all_obs = []
-    offset = 0
-    page = 1000
-    while True:
-        r = requests.get(
-            f"{obs_url}?journey_date=gte.{cutoff}&select=train_no,station_code,arr_delay_min",
-            headers={**HEADERS, "Range": f"{offset}-{offset+page-1}"},
-        )
-        if r.status_code not in (200, 206):
-            logger.warning(f"  fetch obs error {r.status_code}: {r.text[:150]}")
-            break
-        rows = r.json()
-        all_obs.extend(rows)
-        if len(rows) < page:
-            break
-        offset += page
-
-    logger.info(f"  loaded {len(all_obs)} observations (last 30d)")
+    """Recompute station_delay_30d from the last 30 days of CSV files."""
+    logger.info("Computing 30-day station-wise averages from CSVs...")
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=30)).date()
 
     from collections import defaultdict
+    import csv as csvmod
     agg = defaultdict(list)
-    for o in all_obs:
-        d = o.get("arr_delay_min")
-        if d is not None:
-            agg[(o["train_no"], o["station_code"])].append(d)
+
+    files = sorted(RAW_DIR.glob("delays_*.csv"))
+    used = 0
+    for fp in files:
+        # filename: delays_YYYY-MM-DD.csv
+        try:
+            fdate = datetime.strptime(fp.stem.replace("delays_", ""), "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if fdate < cutoff:
+            continue
+        used += 1
+        with open(fp, encoding="utf-8") as f:
+            for row in csvmod.DictReader(f):
+                d = row.get("arr_delay_min")
+                if d not in (None, "", "None"):
+                    try:
+                        agg[(row["train_no"], row["station_code"])].append(int(float(d)))
+                    except ValueError:
+                        pass
+
+    logger.info(f"  aggregated {used} daily files")
 
     now_ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     summary_rows = [{
@@ -239,10 +225,23 @@ def collect(limit=None, batch=None, total=None):
 
     logger.info(f"Fetched: ok={ok} no_data={no_data} failed={failed} | rows={len(all_rows)}")
 
-    upserted = upsert_observations(all_rows) if all_rows else 0
-    logger.info(f"Upserted {upserted} observations")
+    # Write raw observations to a per-batch CSV (committed to git by the workflow).
+    written = 0
+    if all_rows:
+        import csv as csvmod
+        RAW_DIR.mkdir(parents=True, exist_ok=True)
+        suffix = f"_b{batch}" if batch else ""
+        csv_path = RAW_DIR / f"delays_{journey_date}{suffix}.csv"
+        with open(csv_path, "w", newline="", encoding="utf-8") as f:
+            w = csvmod.DictWriter(f, fieldnames=["train_no", "station_code", "journey_date",
+                                                 "arr_delay_min", "dep_delay_min"])
+            w.writeheader()
+            for r_ in all_rows:
+                w.writerow(r_)
+            written = len(all_rows)
+        logger.info(f"Wrote {written} rows to {csv_path.name}")
 
-    return ok, upserted
+    return ok, written
 
 
 if __name__ == "__main__":

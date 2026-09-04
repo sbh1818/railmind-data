@@ -6,7 +6,7 @@ on:
   workflow_dispatch:        # manual trigger anytime
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   # Gate: run only every 3rd day from the fixed start date (2026-09-05).
@@ -53,6 +53,21 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python scripts/collect_ntes_delays.py --batch ${{ matrix.batch }} --total 3
+      - name: Commit raw CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/daily_collected/ntes_delays/
+          if git diff --staged --quiet; then
+            echo "No new data"
+          else
+            git commit -m "data: ntes delays batch ${{ matrix.batch }}"
+            # retry push in case parallel batches race
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin master && git push origin master && break
+              sleep $((RANDOM % 10 + 3))
+            done
+          fi
 
   # Stage 2: recompute 30-day averages after all batches finish + notify
   aggregate:
