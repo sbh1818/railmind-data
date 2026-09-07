@@ -17,6 +17,7 @@ Env: NTFY_TOPIC (optional) for notifications.
 import os
 import sys
 import csv
+import gzip
 import json
 import time
 import random
@@ -53,13 +54,13 @@ JITTER = 0.6
 MAX_CONSEC_FAIL = 25
 
 FIELDNAMES = [
-    "snapshot_datetime", "snapshot_date", "train_no", "train_name",
-    "source_station", "destination_station", "travel_class", "quota",
+    "snapshot_datetime", "train_no", "train_name",
+    "source_station", "destination_station", "travel_class",
     "journey_date", "days_before_journey", "journey_day_of_week",
     "journey_month", "journey_is_weekend",
     "availability_display", "status_type", "position_number",
     "prediction_text", "prediction_percentage", "confirm_status",
-    "gradient", "cache_time", "batch",
+    "batch",
 ]
 
 
@@ -119,7 +120,7 @@ def collect(batch, total, limit=None):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     date_iso = datetime.now().strftime("%Y-%m-%d")
     suffix = "_test" if limit else f"_b{batch}"
-    csv_path = OUT_DIR / f"cnf_wl_{date_iso}{suffix}.csv"
+    csv_path = OUT_DIR / f"cnf_wl_{date_iso}{suffix}.csv.gz"
     start_date = datetime.now().strftime("%d-%m-%Y")
     snap = datetime.now().isoformat()
 
@@ -128,7 +129,7 @@ def collect(batch, total, limit=None):
     consec_fail = 0
     t0 = time.time()
 
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+    with gzip.open(csv_path, "wt", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDNAMES)
         w.writeheader()
         for i, t in enumerate(trains):
@@ -160,18 +161,16 @@ def collect(batch, total, limit=None):
                                 dbj = dow = mon = None
                                 wknd = None
                             w.writerow({
-                                "snapshot_datetime": snap, "snapshot_date": date_iso,
+                                "snapshot_datetime": snap,
                                 "train_no": tn, "train_name": t["train_name"],
                                 "source_station": t["source_code"], "destination_station": t["dest_code"],
-                                "travel_class": cls, "quota": "GN", "journey_date": jdate,
+                                "travel_class": cls, "journey_date": jdate,
                                 "days_before_journey": dbj, "journey_day_of_week": dow,
                                 "journey_month": mon, "journey_is_weekend": wknd,
                                 "availability_display": disp, "status_type": st, "position_number": pos,
                                 "prediction_text": info.get("predictionDisplayName", ""),
                                 "prediction_percentage": info.get("predictionPercentage", ""),
                                 "confirm_status": info.get("confirmTktStatus", ""),
-                                "gradient": info.get("gradient", ""),
-                                "cache_time": info.get("cacheTime", ""),
                                 "batch": f"{batch}/{total}",
                             })
                             rows += 1
@@ -192,19 +191,19 @@ def collect(batch, total, limit=None):
 def aggregate(total):
     """Merge today's batch CSVs into one, send ntfy summary."""
     date_iso = datetime.now().strftime("%Y-%m-%d")
-    parts = sorted(OUT_DIR.glob(f"cnf_wl_{date_iso}_b*.csv"))
+    parts = sorted(OUT_DIR.glob(f"cnf_wl_{date_iso}_b*.csv.gz"))
     if not parts:
         notify("CNF/WL collection FAILED", f"No batch files for {date_iso}", "x", "high")
         logger.error("No batch files found")
         return
-    merged = OUT_DIR / f"cnf_wl_{date_iso}.csv"
+    merged = OUT_DIR / f"cnf_wl_{date_iso}.csv.gz"
     total_rows = 0
     trains_seen = set()
-    with open(merged, "w", newline="", encoding="utf-8") as out:
+    with gzip.open(merged, "wt", newline="", encoding="utf-8") as out:
         w = csv.DictWriter(out, fieldnames=FIELDNAMES)
         w.writeheader()
         for p in parts:
-            with open(p, encoding="utf-8") as f:
+            with gzip.open(p, "rt", encoding="utf-8") as f:
                 for row in csv.DictReader(f):
                     w.writerow(row)
                     trains_seen.add(row["train_no"])
