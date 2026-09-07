@@ -1,4 +1,4 @@
-name: Delay Collector
+name: CNF/WL Collector
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  # Gate: run only every 3rd day from the fixed start date (2026-09-05).
+  # Gate: run only every 3rd day from the fixed start date (2026-09-08).
   check_day:
     runs-on: ubuntu-latest
     outputs:
@@ -18,10 +18,9 @@ jobs:
       - name: Every-3rd-day gate
         id: gate
         run: |
-          START=$(date -u -d '2026-09-05' +%s)
+          START=$(date -u -d '2026-09-08' +%s)
           NOW=$(date -u +%s)
           DAYS=$(( (NOW - START) / 86400 ))
-          # Always run on manual dispatch; otherwise only when days % 3 == 0
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           elif [ "$DAYS" -ge 0 ] && [ $((DAYS % 3)) -eq 0 ]; then
@@ -31,12 +30,12 @@ jobs:
             echo "Not a run day (days since start = $DAYS)"
           fi
 
-  # Stage 1: collect raw observations in 3 parallel batches
+  # Stage 1: collect availability in 3 parallel batches
   collect:
     needs: check_day
     if: needs.check_day.outputs.run == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:
@@ -47,29 +46,25 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install deps
-        run: pip install requests ntes-client
-      - name: Collect delays (batch ${{ matrix.batch }}/3)
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-        run: python scripts/collect_ntes_delays.py --batch ${{ matrix.batch }} --total 3
-      - name: Commit raw CSV
+        run: pip install requests
+      - name: Collect CNF/WL (batch ${{ matrix.batch }}/3)
+        run: python scripts/collect_cnf_wl.py --batch ${{ matrix.batch }} --total 3
+      - name: Commit batch CSV
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/daily_collected/ntes_delays/
+          git add data/daily_collected/cnf_wl/
           if git diff --staged --quiet; then
             echo "No new data"
           else
-            git commit -m "data: ntes delays batch ${{ matrix.batch }}"
-            # retry push in case parallel batches race
+            git commit -m "data: cnf/wl batch ${{ matrix.batch }}"
             for i in 1 2 3 4 5; do
               git pull --rebase --autostash origin master && git push origin master && break
               sleep $((RANDOM % 10 + 3))
             done
           fi
 
-  # Stage 2: recompute 30-day averages after all batches finish + notify
+  # Stage 2: merge batch CSVs into one daily file + notify
   aggregate:
     needs: collect
     if: needs.check_day.outputs.run == 'true'
@@ -81,13 +76,26 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install deps
-        run: pip install requests ntes-client
-      - name: Aggregate 30-day averages + notify
+        run: pip install requests
+      - name: Merge batches + notify
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python scripts/collect_ntes_delays.py --aggregate
+        run: python scripts/collect_cnf_wl.py --aggregate --total 3
+      - name: Commit merged CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin master || true
+          git add data/daily_collected/cnf_wl/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "data: cnf/wl merged daily file"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin master && git push origin master && break
+              sleep $((RANDOM % 10 + 3))
+            done
+          fi
 
   # Failure alert
   notify_failure:
@@ -100,5 +108,5 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: |
           if [ -n "$NTFY_TOPIC" ]; then
-            curl -d "Delay Collector FAILED! Check: github.com/sbh1818/railmind-data/actions" "https://ntfy.sh/$NTFY_TOPIC"
+            curl -d "CNF/WL Collector FAILED! Check: github.com/sbh1818/railmind-data/actions" "https://ntfy.sh/$NTFY_TOPIC"
           fi
